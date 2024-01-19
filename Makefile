@@ -10,9 +10,12 @@ getters.o: getters.cpp
 printHumanReadableResults.o: printHumanReadableResults.cpp
 	$(CC) $(CFLAGS) -c printHumanReadableResults.cpp
 
-gpu_status: gpu_status.cpp getters.o printHumanReadableResults.o
-	$(CC) $(CFLAGS) gpu_status.cpp -o gpu_status printHumanReadableResults.o getters.o
+printSQLOutput.o: printSQLOutput.cpp
+	$(CC) $(CFLAGS) -c printSQLOutput.cpp
+
+gpu_status: gpu_status.cpp getters.o printHumanReadableResults.o printSQLOutput.o
+	$(CC) $(CFLAGS) gpu_status.cpp -o gpu_status printHumanReadableResults.o printSQLOutput.o getters.o
 
 clean:
-	rm -f gpu_status getters.o printHumanReadableResults.o
+	rm -f gpu_status getters.o printHumanReadableResults.o printSQLOutput.o
 

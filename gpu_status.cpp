@@ -7,6 +7,7 @@
 #include <cuda_runtime_api.h>
 #include <nvml.h>
 #include "printHumanReadableResults.h"
+#include "printSQLOutput.h"
 
 bool outputSQL = false;
 std::ofstream sqlFile;
@@ -22,7 +23,7 @@ int main(int argc, char**argv) {
 	}
 
 	if (outputSQL) {
-
+		printSQLOutput();
 	}else{
 		printHumanReadableResults();
 	}

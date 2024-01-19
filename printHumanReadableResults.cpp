@@ -157,7 +157,6 @@ void printHumanReadableResults(){
 		std::vector<nvmlProcessInfo_t> processes(processCount);
 		nvmlResult = nvmlDeviceGetComputeRunningProcesses(device, &processCount, &processes[0]);
 		if (nvmlResult == NVML_SUCCESS && processCount > 0) {
-			printf("NVML %s Count: %d\n",NVML_SUCCESS,processCount);
 			for (unsigned int j = 0; j < processCount; ++j) {
 				std::string processName = getProcessName(processes[j].pid);
 				std::string commandName = getCommandName(processes[j].pid);
