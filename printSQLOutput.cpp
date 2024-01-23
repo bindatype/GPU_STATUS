@@ -44,7 +44,7 @@ void printSQLOutput(){
 
 	// Iterate over devices
 	for (int i = 0; i < deviceCount; ++i) {
-		std::cout << "INSERT IGNORE INTO TableX (timestamp,nvidia_driver,cuda_driver";
+		std::cout << "INSERT IGNORE INTO gpu_monitoring (timestamp,nvidia_driver,cuda_driver";
 		std::cout << ",device_id,device_name,serial_number,num_cores,compute_mode";
 		std::cout << ",persist_mode,power_state,power,energy,mem_used,mem_total";
 		std::cout << ",temperature,gpu_util,gpu_mem_util,curr_ecc_mode,pend_ecc_mode";
@@ -157,6 +157,10 @@ void printSQLOutput(){
 				std::cout << ",\""<< commandName <<"\"";
 				std::cout << ",\""<< processes[j].usedGpuMemory / 1048576 <<"\"";
 			}
+		} else {
+			std::cout << ",NULL";
+			std::cout << ",NULL";
+			std::cout << ",NULL";
 		}
 		std::cout << ");" << std::endl;
 	}

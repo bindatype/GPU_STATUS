@@ -8,6 +8,7 @@
 #include <nvml.h>
 #include "printHumanReadableResults.h"
 #include "printSQLOutput.h"
+#include "usage.h"
 
 bool outputSQL = false;
 std::ofstream sqlFile;
@@ -15,18 +16,22 @@ std::ofstream sqlFile;
 
 int main(int argc, char**argv) {
 
-	for (int i = 1; i < argc; ++i) {
-		if (strcmp(argv[i], "--output=sql") == 0) {
-			outputSQL = true;
-		}
+    for (int i = 1; i < argc; ++i) {
+	if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
+	    usage();
+	    exit(0);
 	}
-
-	if (outputSQL) {
-		printSQLOutput();
-	}else{
-		printHumanReadableResults();
+	if (strcmp(argv[i], "--output=sql") == 0) {
+	    outputSQL = true;
 	}
+    }
 
-	return 0;
+    if (outputSQL) {
+	printSQLOutput();
+    }else{
+	printHumanReadableResults();
+    }
+
+    return 0;
 }
 
