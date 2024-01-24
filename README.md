@@ -1,6 +1,8 @@
-#GPU_STATUS
+# GPU_STATUS
 extract GPU stats in a more ETL friendly way than nvidia-smi. btw, nvidia-smi has an xml output and if that works you 
 the by all means use that instead :)
 
-#Dependencies
- >=cuda/12.2
+## Dependencies
+ ------------------
+ | CUDA | >=/12.2 |
+ ------------------
