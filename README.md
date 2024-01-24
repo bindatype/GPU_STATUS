@@ -5,9 +5,7 @@ the by all means use that instead :)
 ## Dependencies
 
 
-| CUDA | >=/12.2 |
-
-| First Header  | Second Header |
+| Lib  | Version |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| CUDA  | 12.2 or greater  |
 | Content Cell  | Content Cell  |
