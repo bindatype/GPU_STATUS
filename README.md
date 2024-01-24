@@ -4,9 +4,8 @@ the by all means use that instead :)
 
 ## Dependencies
 
- ------------------
- | CUDA | >=/12.2 |
- ------------------
+
+| CUDA | >=/12.2 |
 
 | First Header  | Second Header |
 | ------------- | ------------- |
