@@ -3,6 +3,7 @@ extract GPU stats in a more ETL friendly way than nvidia-smi. btw, nvidia-smi ha
 the by all means use that instead :)
 
 ## Dependencies
+
  ------------------
  | CUDA | >=/12.2 |
  ------------------
