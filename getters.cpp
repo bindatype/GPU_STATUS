@@ -9,8 +9,8 @@
 #include <unistd.h>
 
 std::string getHostName(){
-    const size_t bufferSize = 1024; // Define the buffer size
-    std::vector<char> buffer(bufferSize); // Create a buffer to hold the hostname
+    const size_t bufferSize = 1024; // Define the buffer size as 1 kB
+    std::vector<char> buffer(bufferSize);  
 
     // Call gethostname and check for errors
     if (gethostname(buffer.data(), bufferSize) != 0) {
