@@ -7,3 +7,8 @@ the by all means use that instead :)
  ------------------
  | CUDA | >=/12.2 |
  ------------------
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
