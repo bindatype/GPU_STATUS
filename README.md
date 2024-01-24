@@ -8,4 +8,4 @@ the by all means use that instead :)
 | Lib  | Version |
 | ------------- | ------------- |
 | CUDA  | 12.2 or greater  |
-| Content Cell  | Content Cell  |
+| NVIDIA  | 545.23.08 or greater  |
