@@ -9,3 +9,6 @@ the by all means use that instead :)
 | ------------- | ------------- |
 | CUDA  | 12.2 or greater  |
 | NVIDIA  | 545.23.08 or greater  |
+
+## Build Directions
+Clone or untar repo and run 'make'. To clean out a build and start fresh run 'make clean'.
