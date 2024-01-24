@@ -49,7 +49,8 @@ void printSQLOutput(){
 	std::cout << ",persist_mode,power_state,power,energy,mem_used,mem_total";
 	std::cout << ",temperature,gpu_util,gpu_mem_util,curr_ecc_mode,pend_ecc_mode";
 	std::cout << ",ecc_mem_errs,l1_errs,l2_errs,reg_file_errs";
-	std::cout << ",pid,commandname,usedGpuMemory";
+	std::cout << ",pid_1,commandname_1,usedGpuMemory_1";
+	std::cout << ",pid_2,commandname_2,usedGpuMemory_2";
 	std::cout << ") VALUES (";
 	std::cout << "\""<< unixTime<<"\"";
 	std::cout << ",\""<< getHostName() <<"\"";
@@ -189,6 +190,13 @@ void printSQLOutput(){
 		    std::cout << ",NULL";
 		    std::cout << ",NULL";
 	    }
+	} else {
+	    std::cout << ",NULL";
+	    std::cout << ",NULL";
+	    std::cout << ",NULL";
+	    std::cout << ",NULL";
+	    std::cout << ",NULL";
+	    std::cout << ",NULL";
 	}
 	std::cout << ");" << std::endl;
 	}
