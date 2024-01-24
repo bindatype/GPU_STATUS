@@ -153,6 +153,10 @@ void printSQLOutput(){
 	nvmlResult = nvmlDeviceGetComputeRunningProcesses(device, &processCount, NULL);
 	std::vector<nvmlProcessInfo_t> processes(processCount);
 	nvmlResult = nvmlDeviceGetComputeRunningProcesses(device, &processCount, &processes[0]);
+
+// Kludge to get last 6 (process info) fields to format properly.
+// Handles at most, 2 processes per gpu. That seems to be rare for us and 3 processes seems never to happen. 
+	    
 	if (nvmlResult == NVML_SUCCESS && processCount > 0) {
 	    //for (unsigned int j = 0; j < processCount; ++j) {
 	    switch (processCount){
